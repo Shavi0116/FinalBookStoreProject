@@ -1,0 +1,32 @@
+a:hover{
+    background-color: blanchedalmond;
+    border-radius: 15px;
+}
+button{
+    border-color: rgb(114, 92, 58);
+    color: rgb(111, 103, 94);
+}
+button:hover{
+    background-color: antiquewhite;
+    border-color: rgb(114, 92, 58);
+}
+
+body{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+#pro{
+    height: 5rem;
+    width: 1rem;
+    text-decoration: antiquewhite;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#pro:hover{
+    cursor: pointer;
+}

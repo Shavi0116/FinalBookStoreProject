@@ -1,0 +1,9 @@
+<div class="container" [ngStyle]="{'background-color': bgColor} ">
+    <label>
+      {{label}}
+    </label>
+  
+    <div class="content">
+      <ng-content></ng-content><!--This is a placeholder so that we can pass html tags directly to this componenet-->
+    </div>
+  </div>

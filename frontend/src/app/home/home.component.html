@@ -1,0 +1,44 @@
+<!-- <div id="pop">
+    <p>Most Popular In Our Store<img src="https://i.pinimg.com/474x/52/5f/15/525f151881881f234dc2e81798945486.jpg" class="icon"></p>
+</div> -->
+<app-tags></app-tags>
+<app-notfound [visible]="!books || !books.length"
+resetLinkText="Reset Search"></app-notfound>
+<ul style="margin-top: 30px;">
+
+    <li *ngFor="let book of books">
+        <a routerLink="/book/{{book.id}}">
+            <img [src]="book.imageUrl" [alt]="book.name"><!--[] is for passing dynamic data these are same as using {{}}-->
+            <div class="content">
+                <div class="name">
+                    {{book.name}}
+                </div>
+                <span class="favorite {{book.favorite?'':'not'}}">
+                    🤎
+                </span>
+                <div class="stars">
+
+                </div>
+                <div class="product-item-footer">
+                    <div class="origins">
+                        <span *ngFor="let origin of book.origins">
+                            {{origin}}
+                        </span>
+                    </div>
+                    <div class="author">
+                        <span>
+                            {{book.author}}
+                        </span>
+                    </div>
+                </div>
+
+                <div class="price">
+                    <span>
+                        {{book.price | currency}}
+                    </span>
+                </div>
+
+            </div>            
+        </a>
+    </li>
+</ul>
